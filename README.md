@@ -10,13 +10,12 @@ sudo chown -R root:root /etc/nixos
 Generate hardware config:
 ```bash
 sudo nixos-generate-config
-sudo cp /etc/nixos/hardware-configuration.nix /etc/nixos/hosts/ash/hardware.nix
+sudo cp /etc/nixos/hardware-configuration.nix /etc/nixos/hosts/$hostname/hardware.nix
 ```
 
 Run flake:
 ```bash
-nixos-rebuild switch --flake /etc/nixos#$hostname \
-  --extra-experimental-features "nix-command flakes"
+nixos-rebuild switch --flake /etc/nixos#$hostname
 ```
 
 
