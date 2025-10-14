@@ -8,10 +8,10 @@
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" ];
     shell = pkgs.zsh;
+    initialPassword = "1234"; # change on first boot
   };
 
-  # Bootloader choice happens at install time; leave default here.
-  # Dual-boot safety: we’ll keep Windows’ EFI intact during install.
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
 
-  # Import anything per-host later (monitors, disks, GPU quirks).
 }

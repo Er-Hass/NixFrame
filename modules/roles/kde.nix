@@ -15,7 +15,4 @@
     powerManagement.enable = false;   # keep conservative first
   };
   boot.kernelParams = [ "nvidia_drm.modeset=1" ];
-
-  # KDE portal already added in common/system.nix (xdg-desktop-portal-kde)
-  # Keep Electron/Firefox Wayland flags in env (already set).
 }

@@ -58,5 +58,5 @@ in
   ];
 
   # Keep this minimal now; we’ll grow it steadily.
-  home.stateVersion = "24.11"; # set to your target NixOS version
+  home.stateVersion = "25.05"; # set to your target NixOS version
 }
