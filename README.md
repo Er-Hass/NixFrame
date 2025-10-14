@@ -1,3 +1,10 @@
+## Build
+```bash
+nixos-rebuild switch --flake .#ash
+```
+
+
+## Structure
 ```text
 OSmium/
 ├─ flake.nix
